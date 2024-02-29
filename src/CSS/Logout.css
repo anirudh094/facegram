@@ -1,0 +1,13 @@
+.logout-body {
+  padding: 20px;
+  display: flex;
+  bottom: 0 !important;
+  position: fixed;
+  width: 18%;
+  border-top: 1px solid grey;
+}
+.logout-body div {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}

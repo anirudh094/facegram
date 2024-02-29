@@ -1,0 +1,16 @@
+.navigation-body{
+    padding: 20px;
+}
+.navigation-icon{
+    display: flex;
+    color: grey;
+    cursor: pointer;
+}
+.navigation-icon:active,.navigation-icon:focus,.navigation-icon:hover{
+    color: white;
+}
+.navigation-icon div{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}

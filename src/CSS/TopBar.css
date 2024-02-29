@@ -1,8 +1,8 @@
 .topbar-body{
     background-color: #151515;
     color: white;
-    position: fixed;
-    width: 100vw;
+    top: 0;
+    position: sticky;
     margin-left: 18%;
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
