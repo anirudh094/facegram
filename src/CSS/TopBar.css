@@ -1,0 +1,16 @@
+.topbar-body{
+    background-color: #151515;
+    color: white;
+    position: fixed;
+    width: 100vw;
+    margin-left: 18%;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 15px 25px;
+}
+.search-box{
+    border: 1px solid grey;
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px;
+}
