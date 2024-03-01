@@ -42,7 +42,7 @@ function Create() {
           type="text"
           className="create-post-caption"
           onChange={(e) => setcaption(e.target.value)}
-          placeholder="What's on your mind, Name?"
+          placeholder="What's on your mind..?"
         />
       </div>
       <div className="create-post-addon">

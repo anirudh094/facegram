@@ -11,6 +11,15 @@
 @media screen and (max-width: 1200px){
   .create-body{
     margin: auto;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 370px){
+  .create-body{
+    width: 290px;
+  }
+  .create-post-caption{
+    width: 190px !important;
   }
 }
 .create-post {
