@@ -9,6 +9,11 @@
   grid-column-gap: 15px;
   grid-row-gap: 15px;
 }
+@media screen and (max-width: 1200px){
+  .explore-body{
+    margin: auto;
+  }
+}
 .explore-body-cards {
   background-color: #151515;
   border-radius: 20px;

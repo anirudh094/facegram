@@ -1,5 +1,6 @@
 .logout-body {
   padding: 20px;
+  padding-bottom: 10px;
   display: flex;
   bottom: 0 !important;
   position: fixed;
@@ -8,6 +9,6 @@
 }
 .logout-body div {
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 20px;
 }
