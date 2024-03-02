@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import Logout from "./Logout";
 import MenuIcon from "@rsuite/icons/Menu";
 import { Drawer, ButtonToolbar, Button } from "rsuite";
+import { IoIosSearch } from "react-icons/io";
 
 function TopBar() {
   const MenuUIcon = ({ size }) => (
@@ -23,7 +24,10 @@ function TopBar() {
         <img src="images/logo.png" alt="logo"></img>
       </div>
       <div className="topbar-body-box">
-        <div className="search-box">Search</div>
+        <div className="search-box">
+          <input type="text" placeholder="Search"></input>
+          <IoIosSearch />
+        </div>
       </div>
       <div>
         <ButtonToolbar className="menu-btn">
@@ -43,8 +47,11 @@ function TopBar() {
           <Drawer.Body>
             <Profile />
             <Navigation />
-            <Logout />
-            <div className="search-box search-box-drawer">Search</div>
+            <Logout /> 
+            <div className="search-box search-box-drawer">
+              <input type="text" placeholder="Search"></input>
+              <IoIosSearch />
+            </div>
           </Drawer.Body>
         </Drawer>
       </div>

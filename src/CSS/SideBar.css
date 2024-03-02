@@ -1,12 +1,12 @@
 .sidebar-body{
     background-color: #151515;
+    top: 60px;
     width: 18vw;
     height: 100vh;
     position: fixed;
     color: white;
     border-right: 1px solid grey;
     padding: 10px 0px;
-    margin-top: 60px;
 }
 
 @media screen and (max-width: 1200px){

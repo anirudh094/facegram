@@ -23,13 +23,27 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .search-box{
     border: 1px solid grey;
     width: 250px;
-    border-radius: 5px;
     padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.search-box input,.search-box input:focus,.search-box input:active{
+    background-color: #151515;
+    border: 0;
+    font-size: 15px;
+    color: white;
+    outline: 0;
+}
+.search-box-drawer{
+    display: none;
 }
 .menu-btn{
     right: 0 !important;
@@ -57,13 +71,17 @@
     .logo img{
         width: 150px;
     }
+    
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 590px){
     .search-box{
         display: none;
     }
     .search-box-drawer{
-        display: block;
+        display: flex;
         width: 200px;
+    }
+    .search-box-drawer input{
+        width: 160px;
     }
 }
