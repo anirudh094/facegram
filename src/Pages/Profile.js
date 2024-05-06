@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/Profile.css";
 
 function Profile() {
+  const [name, setName] = useState("");
+  const [profilePhoto, setprofilePhoto] = useState("");
+
+  useEffect(() => {
+    const storedName = localStorage.getItem("name");
+    const profile = localStorage.getItem("photo");
+
+    if (storedName) {
+      setName(storedName);
+    }
+    if (profile) {
+      setprofilePhoto(profile);
+    }
+  }, []);
   return (
     <div className="profile-body">
       <img
-        src="https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI="
+        src={profilePhoto}
         alt="profile"
       ></img>
-      <h1>nkchaudhary01</h1>
-      <p>Wildlife Photographer</p>
+      <h1>{name}</h1>
       <button>Edit</button>
       <div className="profile-stats">
         <div>

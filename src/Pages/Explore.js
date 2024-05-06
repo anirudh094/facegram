@@ -25,6 +25,21 @@ function Explore() {
     fetchData();
   },);
 
+  const [name, setName] = useState("");
+  const [profilePhoto, setprofilePhoto] = useState("");
+
+  useEffect(() => {
+    const storedName = localStorage.getItem("name");
+    const profile = localStorage.getItem("photo");
+
+    if (storedName) {
+      setName(storedName);
+    }
+    if (profile) {
+      setprofilePhoto(profile);
+    }
+  }, []);
+
   return (
     <>
       <div className="explore-body">
@@ -32,11 +47,11 @@ function Explore() {
           <div className="explore-body-cards">
             <div className="explore-body-cards-acc-info">
               <img
-                src="https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI="
+                src={profilePhoto}
                 alt="profile"
               ></img>
               <div>
-                <h4>cameron_will</h4>
+                <h4>{name}</h4>
                 <h5>Mumbai, India</h5>
               </div>
             </div>

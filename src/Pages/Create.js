@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../CSS/Create.css";
 import { imgDB } from "./Firebase/Firebaseconfig.js";
 import { v4 } from "uuid";
@@ -30,12 +30,23 @@ function Create() {
     //window.location.reload(true);
   };
 
+  const [profilePhoto, setprofilePhoto] = useState("");
+
+  useEffect(() => {
+    const profile = localStorage.getItem("photo");
+
+    
+    if (profile) {
+      setprofilePhoto(profile);
+    }
+  }, []);
+
   return (
     <div className="create-body">
       <div className="create-post">
         <img
           className="create-post-dp"
-          src="https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI="
+          src={profilePhoto}
           alt="profile"
         ></img>
         <input
