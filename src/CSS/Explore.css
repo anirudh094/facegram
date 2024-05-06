@@ -2,16 +2,20 @@
   color: white;
   margin-top: 70px;
   margin-left: 18vw;
-  display: grid;
+  /* display: grid;
   align-items: center;
   justify-content: space-evenly;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-row-gap: 15px; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@media screen and (max-width: 1200px){
-  .explore-body{
+@media screen and (max-width: 1200px) {
+  .explore-body {
     margin: auto;
   }
 }
@@ -21,6 +25,7 @@
   padding: 10px;
   width: fit-content;
   height: fit-content;
+  margin-bottom: 15px;
 }
 .explore-body-cards-acc-info {
   display: flex;
@@ -45,16 +50,16 @@
   max-width: 300px;
   margin-top: 10px;
 }
-.explore-post-impressions{
+.explore-post-impressions {
   margin-top: 5px;
 }
-.explore-post-impressions-icon{
+.explore-post-impressions-icon {
   margin-right: 15px !important;
 }
-.explore-post-caption{
+.explore-post-caption {
   display: flex;
   margin-top: 10px;
 }
-.explore-post-caption-quotes{
+.explore-post-caption-quotes {
   margin: 0px 5px !important;
 }
