@@ -6,7 +6,7 @@ import { Icon } from "semantic-ui-react";
 function Navigation() {
   return (
     <div className="navigation-body">
-      <Link to={"/"} className="navigation-icon">
+      <Link to={"/home"} className="navigation-icon">
         <Icon name="home" size="large" />
         <div>Home</div>
       </Link>

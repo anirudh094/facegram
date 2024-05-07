@@ -1,0 +1,12 @@
+.googlelogin{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.googlelogin svg {
+    height: 30px;
+    margin-right: 10px;
+  }

@@ -3,14 +3,14 @@ import "../CSS/Explore.css";
 import { Icon } from "semantic-ui-react";
 import { txtDB } from "./Firebase/Firebaseconfig";
 import { ref, onValue, query, orderByChild } from "firebase/database";
+import TopBar from "./TopBar";
+import SideBar from "./SideBar";
+
 function Explore() {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    const dbref = query(
-      ref(txtDB, "Posts"),
-      orderByChild("imgUrl")
-    );
+    const dbref = query(ref(txtDB, "Posts"), orderByChild("imgUrl"));
     const fetchData = () => {
       onValue(dbref, (snapshot) => {
         let records = [];
@@ -23,7 +23,7 @@ function Explore() {
       });
     };
     fetchData();
-  },);
+  });
 
   const [name, setName] = useState("");
   const [profilePhoto, setprofilePhoto] = useState("");
@@ -42,14 +42,13 @@ function Explore() {
 
   return (
     <>
+      <TopBar />
+      <SideBar />
       <div className="explore-body">
         {tableData.map((row, index) => (
           <div className="explore-body-cards">
             <div className="explore-body-cards-acc-info">
-              <img
-                src={profilePhoto}
-                alt="profile"
-              ></img>
+              <img src={profilePhoto} alt="profile"></img>
               <div>
                 <h4>{name}</h4>
                 <h5>Mumbai, India</h5>
