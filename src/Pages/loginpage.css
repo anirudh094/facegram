@@ -5,6 +5,8 @@
     align-items: center;
     text-align: center;
     margin: auto;
+    outline: 0;
+    border: 0;
 }
 .googlelogin svg {
     height: 30px;

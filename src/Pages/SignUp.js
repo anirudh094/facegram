@@ -19,7 +19,7 @@ const SignUp = () => {
       .then((userCredential) => {
         console.log(userCredential);
         localStorage.setItem("email", userCredential.user.email);
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         console.log(error);
@@ -33,7 +33,7 @@ const SignUp = () => {
       .then((userCredential) => {
         console.log(userCredential);
         localStorage.setItem("email", userCredential.user.email);
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         console.log(error);
