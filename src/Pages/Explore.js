@@ -25,20 +25,20 @@ function Explore() {
     fetchData();
   });
 
-  const [name, setName] = useState("");
-  const [profilePhoto, setprofilePhoto] = useState("");
+  // const [name, setName] = useState("");
+  // const [profilePhoto, setprofilePhoto] = useState("");
 
-  useEffect(() => {
-    const storedName = localStorage.getItem("name");
-    const profile = localStorage.getItem("photo");
+  // useEffect(() => {
+  //   const storedName = localStorage.getItem("name");
+  //   const profile = localStorage.getItem("photo");
 
-    if (storedName) {
-      setName(storedName);
-    }
-    if (profile) {
-      setprofilePhoto(profile);
-    }
-  }, []);
+  //   if (storedName) {
+  //     setName(storedName);
+  //   }
+  //   if (profile) {
+  //     setprofilePhoto(profile);
+  //   }
+  // }, []);
 
   return (
     <>
@@ -48,9 +48,9 @@ function Explore() {
         {tableData.map((row, index) => (
           <div className="explore-body-cards">
             <div className="explore-body-cards-acc-info">
-              <img src={profilePhoto} alt="profile"></img>
+              <img src={row.data.dp} alt="profile"></img>
               <div>
-                <h4>{name}</h4>
+                <h4>{row.data.username}</h4>
                 <h5>Mumbai, India</h5>
               </div>
             </div>

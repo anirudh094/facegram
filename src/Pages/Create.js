@@ -28,15 +28,22 @@ function Create() {
     set(myRef(db, "Posts/" + dateofPost), {
       captionVal: caption,
       imgUrl: img,
+      dp: profilePhoto,
+      username: name,
     });
     //window.location.reload(true);
   };
 
+  const [name, setName] = useState("");
   const [profilePhoto, setprofilePhoto] = useState("");
 
   useEffect(() => {
+    const storedName = localStorage.getItem("name");
     const profile = localStorage.getItem("photo");
 
+    if (storedName) {
+      setName(storedName);
+    }
     if (profile) {
       setprofilePhoto(profile);
     }
