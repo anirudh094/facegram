@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "./Firebase/Firebaseconfig";
 import { useNavigate } from "react-router-dom";
-import SignINwithGoogle from "./loginwithgoogle";
+import SignINwithGoogle from "./AuthDetails";
 import "../CSS/signUp.css";
 
 const SignUp = () => {
