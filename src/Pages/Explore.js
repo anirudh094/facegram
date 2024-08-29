@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../CSS/Explore.css";
 import { Icon } from "semantic-ui-react";
 import { txtDB } from "./Firebase/Firebaseconfig";
-import { ref, onValue, query, orderByChild } from "firebase/database";
+import { ref, onValue, query, orderByKey} from "firebase/database";
 import TopBar from "./TopBar";
 import SideBar from "./SideBar";
 
@@ -10,7 +10,7 @@ function Explore() {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    const dbref = query(ref(txtDB, "Posts"), orderByChild("imgUrl"));
+    const dbref = query(ref(txtDB, "Posts"), orderByKey());
     const fetchData = () => {
       onValue(dbref, (snapshot) => {
         let records = [];
@@ -19,26 +19,12 @@ function Explore() {
           let data = childSnapshot.val();
           records.push({ key: keyName, data: data });
         });
+        records.sort((a, b) => b.key.localeCompare(a.key));
         setTableData(records);
       });
     };
     fetchData();
   });
-
-  // const [name, setName] = useState("");
-  // const [profilePhoto, setprofilePhoto] = useState("");
-
-  // useEffect(() => {
-  //   const storedName = localStorage.getItem("name");
-  //   const profile = localStorage.getItem("photo");
-
-  //   if (storedName) {
-  //     setName(storedName);
-  //   }
-  //   if (profile) {
-  //     setprofilePhoto(profile);
-  //   }
-  // }, []);
 
   return (
     <>
